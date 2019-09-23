@@ -202,6 +202,8 @@ public class AppTaskPractice {
 		
 		Person person = new Person();
 		
+		System.out.println("Test");
+		
 		person.process();
 		
 		
