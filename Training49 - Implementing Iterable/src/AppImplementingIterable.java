@@ -15,7 +15,7 @@ public class AppImplementingIterable {
 		
 		Iterator<String> it = animals.iterator();
 		
-				//hasNext if there are nextitem on the list
+				//hasNext if there are next item on the list
 		while(it.hasNext()) {
 			
 			//start in the first item of the list

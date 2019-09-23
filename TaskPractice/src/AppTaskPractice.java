@@ -9,6 +9,14 @@ class Person{
 	String name;
 	
 	
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public Person() {
 		
 	}
@@ -35,6 +43,7 @@ class Person{
 		
 
 		HashMap<Integer, String> map = new HashMap<Integer, String>();
+		Person person = new Person();
 		
 		Scanner scanner = new Scanner(System.in);
 		Scanner scanner1 = new Scanner(System.in);
@@ -88,7 +97,8 @@ class Person{
 						System.out.println("Insert name:");
 						String inputName = scanner2.nextLine();
 						
-						Person person = new Person(inputId,inputName);
+						person.setId(inputId);
+						person.setName(inputName);
 						
 						map.put(person.getId(), person.getName());
 					}
@@ -118,8 +128,6 @@ class Person{
 
 						map.put(idInput, name);
 					}
-					
-
 					
 
 				}
