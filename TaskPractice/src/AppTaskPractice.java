@@ -118,28 +118,34 @@ class Person{
 					
 
 					if(map.containsKey(idInput)) {
-						
-						System.out.println("No ID found!");
-					}
-					else {
 						System.out.println("Employee Name: " + map.get(idInput));
 						System.out.print("Change name into: ");
 						name = scanner2.nextLine();
-
-						map.put(idInput, name);
+						map.put(idInput, name);						
+					}
+					else {
+						System.out.println("No ID found!");
 					}
 					
 
 				}
 				// remove an existing employee
 				else if (input1 == 4) {
-
 					System.out.print("Insert ID:");
 					int idInput = id1.nextInt();
+					
 
-					map.remove(idInput);
-
-					System.out.println("Employee " + idInput + " has been removed");
+					if(map.containsKey(idInput)) {
+						
+						System.out.println("Employee Name: " + map.get(idInput));						
+						map.remove(idInput);
+						System.out.println("Employee " + idInput + " has been removed");				
+					}
+					else {
+						System.out.println("No ID found!");
+					}
+					
+					
 					
 				
 				}
