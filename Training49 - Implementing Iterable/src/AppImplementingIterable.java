@@ -5,43 +5,15 @@ public class AppImplementingIterable {
 
 	public static void main(String[] args) {
 		
-		LinkedList<String> animals = new LinkedList<String>();
+		UrlLibrary urlLibrary = new UrlLibrary();
 		
-		animals.add("kitsune");
-		animals.add("neko");
-		animals.add("inu");
-		animals.add("usagi");
-		
-		
-		Iterator<String> it = animals.iterator();
-		
-				//hasNext if there are next item on the list
-		while(it.hasNext()) {
+	
+		for(String html: urlLibrary) {
 			
-			//start in the first item of the list
-			String value = it.next();
+			System.out.println(html.length());
 			
-			System.out.println(value);
-			
-			if(value.equals("neko")) {
-				
-				it.remove();
-			}
-			
+			System.out.println(html);
 		}
-		
-		System.out.println();
-		
-		
-		
-		// Modern iteration, java 5 and later
-		
-		
-		for(String animal: animals) {
-			
-			System.out.println(animal);
-		}
-		
 		
 		
 	}
