@@ -4,7 +4,7 @@ public class C10R01 {
 
 	public static void main(String[] args) {
 
-		int n1, n2, n3;
+		int n1, n2, n3, value;
 
 		Scanner input1 = new Scanner(System.in);
 
@@ -18,7 +18,8 @@ public class C10R01 {
 		System.out.println();
 
 		System.out.println("OUTPUT (C10R01.java) ");
-		System.out.print("The smallest value is " + smallest(n1, n2, n3) + "\n");
+		value = smallest(n1, n2, n3);
+		System.out.print("The smallest value is " + value + "\n");
 		System.out.println();
 		System.out.println("OUTPUT (C10R02.java) ");
 		System.out.print("The average value is " + average(n1, n2, n3) + "\n");
@@ -26,8 +27,19 @@ public class C10R01 {
 	}
 
 	public static int smallest(int n1, int n2, int n3) {
+		int value = 0;
 
-		return Math.min(Math.min(n1, n2), n3);
+		if (n1 < n2 && n1 < n3) {
+			value = n1;
+		} else if (n2 < n3) {
+			value = n2;
+		} else {
+			value = n3;
+		}
+
+		return value;
+
+//		return Math.min(Math.min(n1, n2), n3);
 
 	}
 
