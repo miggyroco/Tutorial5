@@ -12,6 +12,7 @@ public class C10R17 {
 		char opt = 0;
 		int loop = 0;
 
+		
 		while (loop != 1) {
 
 			System.out.print("Enter First Number: ");
@@ -73,7 +74,7 @@ public class C10R17 {
 	}
 
 	public static double Subtraction(double num1, double num2) {
-		System.out.println("You have chosen Subratction option\n");
+		System.out.println("You have chosen Subtraction option\n");
 		return num1 - num2;
 	}
 }
