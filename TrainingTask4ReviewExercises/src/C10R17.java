@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class C10R17 {
 
-	public static double num1 = 0, num2 = 0, result = 0;
+	private static double num1 = 0, num2 = 0, result = 0;
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -50,38 +50,43 @@ public class C10R17 {
 		opt = scanner2.next().charAt(0);
 
 		if (opt == 'm' || opt == 'M') {
+			System.out.println("\n\nYou have chosen Multiplication option\n");
 			result = Multiplication(num1, num2);
 		} else if (opt == 'd' || opt == 'D') {
+			System.out.println("You have chosen Division option\n");
 			result = Division(num1, num2);
 		} else if (opt == 'a' || opt == 'A') {
+			System.out.println("You have chosen Addition option\n");
 			result = Addition(num1, num2);
 		} else if (opt == 's' || opt == 'S') {
+			System.out.println("You have chosen Subtraction option\n");
 			result = Subtraction(num1, num2);
 		} else if (opt == 'q' || opt == 'Q') {
 			System.exit(0);
 		} else {
 			System.out.println("invalid input");
+			result = 0;
 		}
 
 	}
 
 	public static double Multiplication(double num1, double num2) {
-		System.out.println("\n\nYou have chosen Multiplication option\n");
+
 		return num1 * num2;
 	}
 
 	public static double Division(double num1, double num2) {
-		System.out.println("You have chosen Division option\n");
+
 		return num1 / num2;
 	}
 
 	public static double Addition(double num1, double num2) {
-		System.out.println("You have chosen Addition option\n");
+
 		return num1 + num2;
 	}
 
 	public static double Subtraction(double num1, double num2) {
-		System.out.println("You have chosen Subtraction option\n");
+
 		return num1 - num2;
 	}
 }
