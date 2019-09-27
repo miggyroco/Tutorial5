@@ -2,33 +2,21 @@ import java.util.Scanner;
 
 public class C10R17 {
 
-	public static double result = 0;
-	
+	public static double num1 = 0, num2 = 0, result = 0;
+
 	public static void main(String[] args) {
-
 		Scanner scanner = new Scanner(System.in);
-		Scanner scanner1 = new Scanner(System.in);
-		
 
-		double num1 = 0, num2 = 0;
-//		, result = 0;
-		
+//		double num1 = 0, num2 = 0, result = 0; 
+
 		char opt = 0;
 		int loop = 0;
 
-		
-		//Test
-		
+		// Test
+
 		while (loop != 1) {
 
-			System.out.print("Enter First Number: ");
-			num1 = scanner1.nextInt();
-			System.out.print("Enter Second Number: ");
-			num2 = scanner1.nextInt();
-
 			Display_Menu(num1, num2, opt);
-
-			
 
 			System.out.println("The result of this operation is " + result);
 
@@ -42,8 +30,15 @@ public class C10R17 {
 	}
 
 	public static void Display_Menu(double num1, double num2, char opt) {
+
+		Scanner scanner1 = new Scanner(System.in);
 		Scanner scanner2 = new Scanner(System.in);
-		
+
+		System.out.print("Enter First Number: ");
+		num1 = scanner1.nextInt();
+		System.out.print("Enter Second Number: ");
+		num2 = scanner1.nextInt();
+
 		System.out.println();
 		System.out.println("<< Math Operation Menu >>\n");
 		System.out.println("First Number : " + num1 + " " + "Second Number : " + num2);
@@ -51,7 +46,7 @@ public class C10R17 {
 				+ "S - Subtraction \r\n" + "Q - Quit ");
 
 		System.out.print("\nSelect an option: ");
-		
+
 		opt = scanner2.next().charAt(0);
 
 		if (opt == 'm' || opt == 'M') {
@@ -74,13 +69,12 @@ public class C10R17 {
 		System.out.println("\n\nYou have chosen Multiplication option\n");
 		return num1 * num2;
 	}
-	
-	
-	
+
 	public static double Division(double num1, double num2) {
 		System.out.println("You have chosen Division option\n");
 		return num1 / num2;
 	}
+
 	public static double Addition(double num1, double num2) {
 		System.out.println("You have chosen Addition option\n");
 		return num1 + num2;
