@@ -91,23 +91,19 @@ public class AppTask {
 				else if (input1 == 2) {
 					int id, age;
 					String name, sex;
-					
-					
+
 					System.out.print("Input id: ");
 					id = scanner1.nextInt();
-					
-					//check if key exists
-					if(map.containsKey(id)) {
-						
+
+					// check if key exists
+					if (map.containsKey(id)) {
+
 						System.out.println("ID is already taken");
-					}
-					else {
+					} else {
 						System.out.print("Input name: ");
 						name = scanner2.nextLine();
 						map.put(id, name);
 					}
-					
-					
 
 				}
 				// update and existing employee

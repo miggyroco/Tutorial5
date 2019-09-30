@@ -14,6 +14,8 @@ public class C10R17 {
 
 		int loop = 0;
 		Scanner scanner1 = new Scanner(System.in);
+		
+		
 
 		while (loop != 1) {
 
@@ -60,6 +62,9 @@ public class C10R17 {
 				loop++;
 			}
 		}
+		
+		
+		
 
 	}
 
